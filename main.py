@@ -1,6 +1,6 @@
 import json
 from graph import graph
-
+from osu import HitCircleManager
 
 
 
@@ -8,9 +8,9 @@ from graph import graph
 with open("./out.json", "r+") as file:
     obj = json.load(file)
     Dgraph = graph.Graph(obj)
-    Dgraph.add_expression(
-        r"H_{itCircleOutline}=\left(\left(x-C_{ircleX}\right)^{2}+\left(y-C_{ircleY}\right)^{2}\right)-h_{itCircleRadius}^{2}",
-        color="#000000")
+    manager = HitCircleManager.HitCircleManager(Dgraph)
+    manager.add_hitcircle(30, (1,0))
+    manager.compile_graph()
     file.truncate(0)
     file.seek(0)
     json.dump(Dgraph.return_json(), file)

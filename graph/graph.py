@@ -12,7 +12,7 @@ class Graph():
         "type" : "expression",
         "latex" : latex_expression,
         "id" : self.current_id,
-        "color": kwargs['color']
+        **kwargs
     }
         self.expressions.append(expr_json)
         self.current_id += 1

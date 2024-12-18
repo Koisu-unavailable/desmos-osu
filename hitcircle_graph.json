@@ -1,0 +1,274 @@
+{
+    "version": 11,
+    "randomSeed": "6d9558b77fd1b36e4c652e1886fb8849",
+    "graph": {
+      "viewport": {
+        "xmin": -29.60555139193727,
+        "ymin": -33.39119948745987,
+        "xmax": 46.6345605690846,
+        "ymax": 16.06768334277811
+      }
+    },
+    "expressions": {
+      "list": [
+        {
+          "type": "folder",
+          "id": "7",
+          "title": "hitcircle"
+        },
+        {
+          "type": "expression",
+          "id": "1",
+          "folderId": "7",
+          "color": "#c74440",
+          "latex": "H_{itCircleOutline}=\\left(\\left(x-C_{ircleX}\\right)^{2}+\\left(y-C_{ircleY}\\right)^{2}\\right)-h_{itCircleRadius}^{2}",
+          "labelSize": "1",
+          "parametricDomain": {
+            "min": "0",
+            "max": "10"
+          },
+          "fillOpacity": "0.4",
+          "domain": {
+            "min": "0",
+            "max": "10"
+          }
+        },
+        {
+          "type": "expression",
+          "id": "33",
+          "folderId": "7",
+          "color": "#2d70b3",
+          "latex": "H_{itCircleOpacity}=2",
+          "slider": {
+            "hardMin": true,
+            "hardMax": true,
+            "playDirection": -1,
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "type": "expression",
+          "id": "26",
+          "folderId": "7",
+          "color": "#000000",
+          "latex": "y=H_{itCircleOutline}",
+          "lineOpacity": "H_{itCircleOpacity}"
+        },
+        {
+          "type": "expression",
+          "id": "27",
+          "folderId": "7",
+          "color": "#2d70b3",
+          "latex": "y>H_{itCircleOutline}",
+          "lines": false,
+          "fillOpacity": "H_{itCircleOpacity}",
+          "clickableInfo": {
+            "enabled": true,
+            "latex": "S_{core}\\to H_{itTimer}\\left(1\\right)"
+          }
+        },
+        {
+          "type": "expression",
+          "id": "3",
+          "folderId": "7",
+          "color": "#fa7e19",
+          "latex": "C_{ircleY}=-1.3",
+          "labelSize": "1",
+          "parametricDomain": {
+            "min": "0",
+            "max": "10"
+          },
+          "fillOpacity": "0.4",
+          "domain": {
+            "min": "0",
+            "max": "10"
+          }
+        },
+        {
+          "type": "expression",
+          "id": "4",
+          "folderId": "7",
+          "color": "#000000",
+          "latex": "C_{ircleX}=-4",
+          "labelSize": "1",
+          "parametricDomain": {
+            "min": "0",
+            "max": "10"
+          },
+          "fillOpacity": "0.4",
+          "domain": {
+            "min": "0",
+            "max": "10"
+          }
+        },
+        {
+          "type": "expression",
+          "id": "8",
+          "folderId": "7",
+          "color": "#388c46",
+          "latex": "h_{itCircleRadius}=10",
+          "hidden": true
+        },
+        {
+          "type": "folder",
+          "id": "34",
+          "title": "Approach Circle"
+        },
+        {
+          "type": "expression",
+          "id": "35",
+          "folderId": "34",
+          "color": "#388c46",
+          "latex": "A_{pproachCircle}=\\left(\\left(x-C_{ircleX}\\right)^{2}+\\left(y-C_{ircleY}\\right)^{2}\\right)-A_{radius}^{2}"
+        },
+        {
+          "type": "expression",
+          "id": "37",
+          "folderId": "34",
+          "color": "#fa7e19",
+          "latex": "y=A_{pproachCircle}"
+        },
+        {
+          "type": "expression",
+          "id": "36",
+          "folderId": "34",
+          "color": "#6042a6",
+          "latex": "A_{radius}=100\\cdot\\frac{3}{g_{ametime}}\\left\\{g_{ametime}<33.33\\right\\}",
+          "hidden": true
+        },
+        {
+          "type": "folder",
+          "id": "14",
+          "title": "Number",
+          "collapsed": true
+        },
+        {
+          "type": "expression",
+          "id": "20",
+          "folderId": "14",
+          "color": "#388c46",
+          "latex": "O_{nevertical}=V_{ertical}\\left(-3.5\\right)\\left\\{-5<y<4.83\\right\\}",
+          "lineOpacity": "H_{itCircleOpacity}",
+          "lineWidth": "10"
+        },
+        {
+          "type": "expression",
+          "id": "22",
+          "folderId": "14",
+          "color": "#388c46",
+          "latex": "O_{nehori}=H_{orizontal}\\left(-5\\right)\\left\\{-6.3<x<-1\\right\\}",
+          "lineOpacity": "H_{itCircleOpacity}",
+          "lineWidth": "10"
+        },
+        {
+          "type": "expression",
+          "id": "17",
+          "folderId": "14",
+          "color": "#c74440",
+          "latex": "O_{neDiagnonalPoint}=\\left(-12.54,\\ 11.83\\right)",
+          "hidden": true
+        },
+        {
+          "type": "expression",
+          "id": "15",
+          "folderId": "14",
+          "color": "#388c46",
+          "latex": "O_{nediagonal}=L_{ine}\\left(2,\\ O_{neDiagnonalPoint},x\\right)\\left\\{-5.915<x<-3.44\\right\\}",
+          "lineOpacity": "H_{itCircleOpacity}",
+          "lineWidth": "10"
+        },
+        {
+          "type": "expression",
+          "id": "24",
+          "folderId": "14",
+          "color": "#388c46",
+          "latex": "H_{itNumber}=\\left[O_{nevertical},\\ O_{nehori},\\ O_{nediagonal}\\right]"
+        },
+        {
+          "type": "folder",
+          "id": "21",
+          "title": "Utils",
+          "collapsed": true
+        },
+        {
+          "type": "expression",
+          "id": "12",
+          "folderId": "21",
+          "color": "#c74440",
+          "latex": "L_{ine}\\left(S_{lope},\\ Y_{intercept},\\ x\\right)=S_{lope}\\cdot x+Y_{intercept}.y"
+        },
+        {
+          "type": "expression",
+          "id": "19",
+          "folderId": "21",
+          "color": "#388c46",
+          "latex": "V_{ertical}\\left(P_{oint}\\right)=P_{oint}",
+          "hidden": true
+        },
+        {
+          "type": "expression",
+          "id": "23",
+          "folderId": "21",
+          "color": "#2d70b3",
+          "latex": "H_{orizontal}\\left(P_{oint}\\right)=P_{oint}",
+          "hidden": true
+        },
+        {
+          "type": "expression",
+          "id": "6",
+          "color": "#2d70b3",
+          "latex": "g_{ametime}=122",
+          "hidden": true,
+          "slider": {
+            "hardMin": true,
+            "hardMax": true,
+            "min": "0",
+            "max": "2^{31}"
+          }
+        },
+        {
+          "type": "folder",
+          "id": "dsm-metadata-folder",
+          "title": "DesModder Metadata",
+          "secret": true
+        },
+        {
+          "type": "text",
+          "id": "dsm-metadata",
+          "folderId": "dsm-metadata-folder",
+          "text": "{\"version\":2,\"expressions\":{\"26\":{\"errorHidden\":true}}}"
+        },
+        {
+          "type": "expression",
+          "id": "32",
+          "color": "#c74440",
+          "latex": "C_{ircleInfo}=\\left[30\\right]"
+        },
+        {
+          "type": "expression",
+          "id": "39",
+          "color": "#2d70b3",
+          "latex": "H_{itTimer}\\left(C_{ircleID}\\right)=\\left\\{C_{ircleInfo}\\left[C_{ircleID}\\right]-5<g_{ametime}<C_{ircleInfo}\\left[C_{ircleID}\\right]+5:300,\\ 50\\right\\}"
+        },
+        {
+          "type": "expression",
+          "id": "40",
+          "color": "#388c46",
+          "latex": "S_{core}=50"
+        },
+        {
+          "type": "expression",
+          "id": "44",
+          "color": "#2d70b3"
+        }
+      ],
+      "ticker": {
+        "handlerLatex": "g_{ametime}\\to g_{ametime}+1",
+        "minStepLatex": "33.33",
+        "open": true
+      }
+    },
+    "includeFunctionParametersInRandomSeed": true,
+    "doNotMigrateMovablePointStyle": true
+  }
