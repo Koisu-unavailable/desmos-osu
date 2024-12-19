@@ -16,6 +16,17 @@ class Graph():
     }
         self.expressions.append(expr_json)
         self.current_id += 1
+    def add_folder(self, name: str) -> int:
+        """Creates a folder and returns it's id"""
+        expr_json = {
+            "type" : "folder",
+            "id" : self.current_id,
+            "title" : name,
+            "collapsed" : False
+        }
+        self.expressions.append(expr_json)
+        self.current_id += 1
+        return self.current_id
     def return_json(self):
         return self.__json
 """

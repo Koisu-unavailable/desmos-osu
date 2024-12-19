@@ -4,6 +4,7 @@ def convert_array_to_desmos_list(arr: list[float]):
     latex_str = f"\left[{arr[arr_index]}"
     for i in range(len(arr)):
         num = arr[i]
+        # Skip first element, already added
         if i == 0:
             arr_index += 1
             continue
